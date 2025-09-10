@@ -6,23 +6,23 @@ import Form from 'react-bootstrap/Form';
 import axios from "axios"
 import { useState } from "react";
 
-const createAnimal = (nome: string, idade: number, raca: string, sexo: string, porte: string,
-     peso: number, observacoes: string, castracao: boolean, imagem: File | undefined
+const createAnimal = (nome: string, idade: string, raca: string, sexo: string, porte: string,
+     peso: string, observacoes: string, castracao: boolean, imagem: File | undefined
 ) => {
     const formData = new FormData();
     formData.append("nome", nome);
-    formData.append("idade", idade.toString());
+    formData.append("idade", idade);
     formData.append("raca", raca);
     formData.append("sexo", sexo);
     formData.append("porte", porte);
-    formData.append("peso", peso.toString());
+    formData.append("peso", peso);
     formData.append("observacoes", observacoes);
     formData.append("castracao", castracao ? "true" : "false");
     if (imagem) {
         formData.append("imagem", imagem);
     }
 
-    axios.post("http://localhost/animais", formData, {
+    axios.post("http://localhost:3002/cadastroanimal", formData, {
         headers: {
             'Content-Type': 'multipart/form-data'
         }
@@ -45,11 +45,11 @@ const CadastroAnimais = () => {
     const router = useRouter();
 
     const [nomeAnimal, setNomeAnimal] = useState<string>("");
-    const [idadeAnimal, setIdadeAnimal] = useState<number>();
+    const [idadeAnimal, setIdadeAnimal] = useState<string>("");
     const [racaAnimal, setRacaAnimal] = useState<string>("");
     const [sexoAnimal, setSexoAnimal] = useState<string>("");
     const [porteAnimal, setPorteAnimal] = useState<string >("");
-    const [pesoAnimal, setPesoAnimal] = useState<number >();
+    const [pesoAnimal, setPesoAnimal] = useState<string >("");
     const [obsAnimal, setObsAnimal] = useState<string >("");
     const [castrado, setCastrado]= useState<boolean >(false);
     const [imgAnimal, setImgAnimal] = useState<File | undefined>(undefined);
@@ -92,10 +92,10 @@ const CadastroAnimais = () => {
 
                                 <div className={styles['input-wrapper']}>
                                     <Form.Label htmlFor="age">Idade</Form.Label>
-                                    <Form.Control id="age" type="number" placeholder="Insira a idade" 
+                                    <Form.Control id="age" type="text" placeholder="Insira a idade" 
                                     value={idadeAnimal}
                                     onChange={(event)=>
-                                        setIdadeAnimal(Number(event.target.value))
+                                        setIdadeAnimal(event.target.value)
                                     }/>
                                 </div>
 
@@ -137,10 +137,10 @@ const CadastroAnimais = () => {
 
                                 <div className={styles['input-wrapper']}>
                                     <Form.Label htmlFor='weight'>Peso (kg)</Form.Label>
-                                    <Form.Control id='weight' type="number" step="0.1" placeholder="Peso em kg"
+                                    <Form.Control id='weight' type="text" step="0.1" placeholder="Peso em kg"
                                     value={pesoAnimal}
                                     onChange={(event)=>
-                                        setPesoAnimal(Number(event.target.value))
+                                        setPesoAnimal(event.target.value)
                                     } />
                                 </div>
 

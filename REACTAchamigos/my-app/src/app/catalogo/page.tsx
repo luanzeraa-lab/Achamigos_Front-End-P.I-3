@@ -16,7 +16,7 @@ const Catalogo = () => {
 
   useEffect(()=>{
         const listaAnimal = async ()=>{
-            const response = await axios.get("http://localhost/animais");
+            const response = await axios.get("http://localhost:3002/cadastroanimal");
 
             setAnimal(response.data);
             console.log(response.data);
@@ -105,9 +105,9 @@ const Catalogo = () => {
                         {animal.map(ani=>{
                     return(
                         <figure className= {styles['figures']}
-                        key={ani.id}>
+                        key={ani._id}>
 
-                            <img className="w-50 h-auto" src={`http://localhost/public/${ani.imagem}`} alt="imagem"
+                            <img className="w-50 h-auto" src={`http://localhost:3002${ani.imagem}`} alt="imagem"
                             />
                             <figcaption>
                                 <p><span className="font-bold">Nome:</span> {ani.nome}</p>

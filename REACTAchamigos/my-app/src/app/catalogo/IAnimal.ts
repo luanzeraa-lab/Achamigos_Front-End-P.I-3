@@ -1,11 +1,11 @@
 export interface IAnimal{
-    id: number;
+    _id: number;
     nome: string;
-    idade: number;
+    idade: string;
     raca: string;
     sexo: string;
     porte: string;
-    peso: number;
+    peso: string;
     observacoes: string;
     castracao: boolean;
     imagem: File;
