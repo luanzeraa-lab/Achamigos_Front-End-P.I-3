@@ -1,5 +1,5 @@
 'use client'
-import styles from './CadastroAnimais.module.css';
+
 
 import { Button } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
@@ -51,7 +51,7 @@ const CadastroUser = () => {
           <>
             
           <Form>
-            <div className={styles['input-wrapper']}>
+            <div>
               <Form.Label>Nome</Form.Label>
               <Form.Control
                 type="text"
@@ -61,7 +61,7 @@ const CadastroUser = () => {
               />
             </div>
 
-            <div className={styles['input-wrapper']}>
+            <div>
               <Form.Label>Telefone</Form.Label>
               <Form.Control
                 type="text"
@@ -71,7 +71,7 @@ const CadastroUser = () => {
               />
             </div>
 
-            <div className={styles['input-wrapper']}>
+            <div>
               <Form.Label>CNPJ</Form.Label>
               <Form.Control
                 type="text"
@@ -81,7 +81,7 @@ const CadastroUser = () => {
               />
             </div>
 
-            <div className={styles['input-wrapper']}>
+            <div>
               <Form.Label>Login</Form.Label>
               <Form.Control
                 type="text"
@@ -91,7 +91,7 @@ const CadastroUser = () => {
               />
             </div>
 
-            <div className={styles['input-wrapper']}>
+            <div>
               <Form.Label>Senha</Form.Label>
               <Form.Control
                 type="password"
@@ -101,7 +101,7 @@ const CadastroUser = () => {
               />
             </div>
 
-            <div className={styles['input-wrapper']}>
+            <div>
               <Form.Label>Email</Form.Label>
               <Form.Control
                 type="email"
@@ -111,7 +111,7 @@ const CadastroUser = () => {
               />
             </div>
 
-            <div className={styles['input-wrapper']}>
+            <div>
               <Form.Label>Endereço</Form.Label>
               <Form.Control
                 type="text"
@@ -121,7 +121,7 @@ const CadastroUser = () => {
               />
             </div>
 
-            <div className={styles['input-wrapper']}>
+            <div>
               <Form.Label>Tipo</Form.Label>
               <Form.Control
                 type="text"
@@ -131,7 +131,7 @@ const CadastroUser = () => {
               />
             </div>
 
-            <div className={styles['input-wrapper']}>
+            <div>
               <Form.Label>Status</Form.Label>
               <Form.Control
                 type="text"
@@ -141,7 +141,7 @@ const CadastroUser = () => {
               />
             </div>
                         
-                        <Button className={styles['btn-primary']} type="button"
+                        <Button  type="button"
                         onClick={()=>{
                             createUser();
                         }}>Finalizar cadastro</Button>
