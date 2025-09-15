@@ -16,10 +16,10 @@ const createEvento = (nomeEvento: string, data_Publicacao: Date, data_Exclusao :
     formData.append("texto", texto);
     formData.append("eventoStatus", eventoStatus);
     if (imagem) {
-        formData.append("imagemEvento", imagem);
+        formData.append("imagem", imagem);
     }
 
-    axios.post("http://localhost:3002/cadastroevento", formData, {
+    axios.post("http://localhost:3002/cadastroeventos", formData, {
         headers: {
             'Content-Type': 'multipart/form-data'
         }
@@ -27,7 +27,7 @@ const createEvento = (nomeEvento: string, data_Publicacao: Date, data_Exclusao :
 
     .then((res) => {
       console.log(JSON.stringify(res.data));
-      if (res.status === 201) {
+      if (res.status === 200) {
         alert("Evento cadastrado com sucesso!");
       } else {
         alert("Falha ao tentar cadastrar o evento");
@@ -98,7 +98,7 @@ const CadastroEventos = () => {
             <div >
               <Form.Label>Texto de explicação</Form.Label>
               <Form.Control
-                type="password"
+                type="text"
                 placeholder="Insira a explicação do evento"
                 value={texto}
                 onChange={(e) => setTexto(e.target.value)}
