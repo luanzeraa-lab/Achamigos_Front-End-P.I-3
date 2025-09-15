@@ -5,6 +5,8 @@ import Form from 'react-bootstrap/Form';
 import axios from "axios"
 import { useState } from "react";
 import { IUser } from './IUser';
+import Nav2 from "@/components/Nav2";
+import Footer from "@/components/Footer";
 
 const CadastroUser = () => {
 
@@ -14,9 +16,12 @@ const CadastroUser = () => {
   const [userLogin, setUserLogin] = useState<string>("");
   const [senhaUser, setSenhaUser] = useState<string>("");
   const [emailUser, setEmailUser] = useState<string>("");
-  const [enderecoUser, setEnderecoUser] = useState<string>("");
+  const [cidadeUser, setCidadeUser] = useState<string>("");
+  const [ruaUser, setRuaUser] = useState<string>("");
+  const [numeroUser, setNumeroUser] = useState<string>("");
   const [tipoUser, setTipoUser] = useState<string>("");
   const [userStatus, setUserStatus] = useState<string>("");
+  const [linkUser, setLinkUser] = useState<string>("");
 
   const createUser = async () => {
     const novoUser: IUser = {
@@ -26,9 +31,10 @@ const CadastroUser = () => {
       userLogin,
       senha: senhaUser,
       email: emailUser,
-      endereco: enderecoUser,
+      endereco: {cidade: cidadeUser, rua: ruaUser, numero: numeroUser},
       tipo: tipoUser,
-      userStatus : userStatus
+      userStatus : userStatus,
+      linkUser: linkUser
     };
 
     try {
@@ -45,6 +51,8 @@ const CadastroUser = () => {
 
   return (
     <>
+    <div className="min-h-screen flex flex-col bg-[#ffeccf]">
+          <Nav2 /> 
       <Form>
         <div>
           <Form.Label>Nome</Form.Label>
@@ -107,12 +115,30 @@ const CadastroUser = () => {
         </div>
 
         <div>
-          <Form.Label>Endereço</Form.Label>
+          <Form.Label>Cidade</Form.Label>
           <Form.Control
             type="text"
             placeholder="Insira o Endereço"
-            value={enderecoUser}
-            onChange={(e) => setEnderecoUser(e.target.value)}
+            value={cidadeUser}
+            onChange={(e) => setCidadeUser(e.target.value)}
+          />
+        </div>
+        <div>
+          <Form.Label>Rua</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Insira o Endereço"
+            value={ruaUser}
+            onChange={(e) => setRuaUser(e.target.value)}
+          />
+        </div>
+        <div>
+          <Form.Label>N°</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Insira o Endereço"
+            value={numeroUser}
+            onChange={(e) => setNumeroUser(e.target.value)}
           />
         </div>
 
@@ -136,10 +162,22 @@ const CadastroUser = () => {
           />
         </div>
 
+        <div>
+          <Form.Label>Link do seu site</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Digite o link do seu site"
+            value={linkUser}
+            onChange={(e) => setLinkUser(e.target.value)}
+          />
+        </div>
+
         <Button type="button" onClick={() => createUser()}>
           Finalizar cadastro
         </Button>
       </Form>
+      <Footer />
+      </div>
     </>
   )
 };

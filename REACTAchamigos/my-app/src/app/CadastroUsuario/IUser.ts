@@ -6,7 +6,8 @@ export interface IUser{
     userLogin: string;
     senha: string; 
     email: string; 
-    endereco: string; 
+    endereco: { cidade: string; rua: string; numero: string }; 
     tipo: string; 
     userStatus: string;
+    linkUser: string;
 }

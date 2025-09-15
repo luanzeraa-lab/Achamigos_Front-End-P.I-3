@@ -4,6 +4,8 @@ import { Button } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import axios from "axios"
 import { useState } from "react";
+import Nav2 from "@/components/Nav2";
+import Footer from "@/components/Footer";
 
 const createEvento = (nomeEvento: string, data_Publicacao: Date, data_Exclusao : Date, tipo_Evento: string, texto: string,
      eventoStatus: string, imagem: File | undefined
@@ -53,7 +55,8 @@ const CadastroEventos = () => {
     
           
           <>
-            
+          <div className="min-h-screen flex flex-col bg-[#ffeccf]">
+          <Nav2 /> 
           <Form>
             <div >
               <Form.Label>Nome do Evento</Form.Label>
@@ -149,6 +152,8 @@ const CadastroEventos = () => {
                             createEvento(nomeEvento, new Date(data_Publicacao), new Date(data_Exclusao), tipo_Evento, texto, eventoStatus, imagemEvento);
                         }}>Finalizar cadastro</Button>
           </Form>
+          <Footer />
+          </div>
           </>
   )
 

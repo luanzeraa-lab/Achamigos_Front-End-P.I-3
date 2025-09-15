@@ -66,10 +66,10 @@ const Login = () => {
                     <div className="mt-4 text-center">
                         <p id="ou">OU</p>
                         <p className="mt-2 font-bold text-2xl">Cadastre-Se</p>
+                        <input className="border-2 rounded-full bg-[#ff8110] w-20 m-2"
+                        type="button" value="Cadastrar" onClick={()=>{router.push("/CadastroUsuario")}} />
                     </div>
 
-                    <input className="border-2 rounded-full bg-[#ff8110] w-20 m-2"
-                     type="button" value="Cadastrar" onClick={()=>{router.push("/CadastroUsuario")}} />
                 </Form>    
             </Formik>
 
