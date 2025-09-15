@@ -16,6 +16,7 @@ const CadastroUser = () => {
   const [userLogin, setUserLogin] = useState<string>("");
   const [senhaUser, setSenhaUser] = useState<string>("");
   const [emailUser, setEmailUser] = useState<string>("");
+  const [cepUser, setCepUser] = useState<string>("");
   const [cidadeUser, setCidadeUser] = useState<string>("");
   const [ruaUser, setRuaUser] = useState<string>("");
   const [numeroUser, setNumeroUser] = useState<string>("");
@@ -31,7 +32,7 @@ const CadastroUser = () => {
       userLogin,
       senha: senhaUser,
       email: emailUser,
-      endereco: {cidade: cidadeUser, rua: ruaUser, numero: numeroUser},
+      endereco: {cep: cepUser, cidade: cidadeUser, rua: ruaUser, numero: numeroUser},
       tipo: tipoUser,
       userStatus : userStatus,
       linkUser: linkUser
@@ -114,6 +115,15 @@ const CadastroUser = () => {
           />
         </div>
 
+        <div>
+          <Form.Label>CEP</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Insira o Endereço"
+            value={cepUser}
+            onChange={(e) => setCepUser(e.target.value)}
+          />
+        </div>
         <div>
           <Form.Label>Cidade</Form.Label>
           <Form.Control
