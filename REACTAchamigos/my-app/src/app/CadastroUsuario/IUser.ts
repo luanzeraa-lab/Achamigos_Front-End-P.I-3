@@ -1,3 +1,5 @@
+import { IEndereco } from "./IEndereco";
+
 export interface IUser{
     _id?: number;
     nome: string;
@@ -6,7 +8,7 @@ export interface IUser{
     userLogin: string;
     senha: string; 
     email: string; 
-    endereco: { cep: string, cidade: string; rua: string; numero: string }; 
+    endereco: IEndereco; 
     tipo: string; 
     userStatus: string;
     linkUser: string;

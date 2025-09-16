@@ -7,6 +7,8 @@ import { useState } from "react";
 import { IUser } from './IUser';
 import Nav2 from "@/components/Nav2";
 import Footer from "@/components/Footer";
+import ConsultaCep from '@/components/ConsultaCep';
+import { IEndereco } from './IEndereco';
 
 const CadastroUser = () => {
 
@@ -25,6 +27,11 @@ const CadastroUser = () => {
   const [linkUser, setLinkUser] = useState<string>("");
 
   const createUser = async () => {
+    
+    const novoEndereco: IEndereco = {
+      cep: cepUser, cidade: cidadeUser, rua: ruaUser, numero: numeroUser
+    };
+
     const novoUser: IUser = {
       nome: nomeUser,
       telefone: telefoneUser,
@@ -32,7 +39,7 @@ const CadastroUser = () => {
       userLogin,
       senha: senhaUser,
       email: emailUser,
-      endereco: {cep: cepUser, cidade: cidadeUser, rua: ruaUser, numero: numeroUser},
+      endereco: novoEndereco,
       tipo: tipoUser,
       userStatus : userStatus,
       linkUser: linkUser
@@ -115,33 +122,8 @@ const CadastroUser = () => {
           />
         </div>
 
-        <div>
-          <Form.Label>CEP</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Insira o Endereço"
-            value={cepUser}
-            onChange={(e) => setCepUser(e.target.value)}
-          />
-        </div>
-        <div>
-          <Form.Label>Cidade</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Insira o Endereço"
-            value={cidadeUser}
-            onChange={(e) => setCidadeUser(e.target.value)}
-          />
-        </div>
-        <div>
-          <Form.Label>Rua</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Insira o Endereço"
-            value={ruaUser}
-            onChange={(e) => setRuaUser(e.target.value)}
-          />
-        </div>
+        <ConsultaCep/>
+        
         <div>
           <Form.Label>N°</Form.Label>
           <Form.Control
