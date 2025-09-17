@@ -1,7 +1,6 @@
 
 
 #allpage {
-
   display: grid;
      grid-template-columns: 51.25% 48.75%;
      height: 100vh;
@@ -115,7 +114,7 @@ position: relative;
 .action-wrapper {
     display: flex;
     gap: 1rem;
-Button {
+ .button {
     
     all: unset;
     font-weight: 500;

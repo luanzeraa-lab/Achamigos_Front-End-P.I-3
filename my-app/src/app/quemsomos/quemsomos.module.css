@@ -41,17 +41,6 @@ background-color: #ffeccf;
 
  }
    
-     h2 {
-      text-align: center;
-      margin-block: 10px;
-      text-transform: uppercase;
-      
-      
-     }
-
-     li {
-      padding-bottom: 20px;
-     }
    
     
 }
@@ -96,12 +85,6 @@ grid-area: footer;
 
  }
 
-   h1 {
-     text-align: center;
-     text-transform: uppercase;
-     padding-block: 20px;
-   }
-   
 
      
     .adms1 {
