@@ -1,31 +1,20 @@
-"use client";
+'use client';
 
-import Header from '../components/Header'
+import Header from '../components/Header';
 import Navbarr from '@/components/Navbarr';
-import Main from '../components/Main'
-import Footer from '../components/Footer'
-import '../components/App.css'
+import Main from '../components/Main';
+import Footer from '../components/Footer';
 
-
-
-
- const App = () => {
-
-    
+const App = () => {
   return (
-    <div className='bg-[#ffeccf]'>
-      
-      
-
-      <Header/>
-      <Navbarr/>
-      <Main/>
+    <div className="bg-[#ffeccf]">
+      <Header />
+      <Navbarr />
+      <Main />
       {/* <Navbarr2/> */}
-      <Footer/>
+      <Footer />
     </div>
-      
-    
   );
-}
+};
 
 export default App;

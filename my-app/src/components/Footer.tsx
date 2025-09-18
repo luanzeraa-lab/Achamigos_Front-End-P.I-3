@@ -1,81 +1,77 @@
 import Image from 'next/image';
 
-const Footer =()=> {
-    return (
-        <>
-            
-        <div id="rodape" className='flex flex-col align-items-center lg:flex-row lg:justify-evenly bg-[#c08457] '>
-                <Image className='hidden lg:flex mb-2'
-                    id="logorodape"
-                    src="/images/logoprojetoachamigos_processed.png"
-                    alt="Logo do projeto Achamigos"
-                    width={50}
-                    height={50}
+const Footer = () => {
+  return (
+    <>
+      <div
+        id="rodape"
+        className="flex flex-col align-items-center lg:flex-row lg:justify-evenly bg-[#c08457] "
+      >
+        <Image
+          className="hidden lg:flex mb-2"
+          id="logorodape"
+          src="/images/logoprojetoachamigos_processed.png"
+          alt="Logo do projeto Achamigos"
+          width={50}
+          height={50}
+        />
 
-                />
-
-                <div className="contatoss">
-                    <div className="redes">
-                    <figure>
-                        <Image src="/icons/instagram-logo-facebook-2-svgrepo-com.svg"
-                alt="icone Whatsapp"  width={600}
+        <div className="contatoss">
+          <div className="redes">
+            <figure>
+              <Image
+                src="/icons/instagram-logo-facebook-2-svgrepo-com.svg"
+                alt="icone Whatsapp"
+                width={600}
                 height={600}
                 style={{
-                  objectFit: 'cover', 
+                  objectFit: 'cover',
                   width: '23px',
-                  height: '23px'
-                }}></Image>
-                        <figcaption>
-                           <span className='font-footer'>Whatsapp</span>
-                        </figcaption>
-                        </figure> 
+                  height: '23px',
+                }}
+              ></Image>
+              <figcaption>
+                <span className="font-footer">Whatsapp</span>
+              </figcaption>
+            </figure>
 
-                            <figure>
-                        <Image src="/icons/instagram-logo-facebook-2-svgrepo-com.svg"
-                alt="icone instagram"  width={600}
+            <figure>
+              <Image
+                src="/icons/instagram-logo-facebook-2-svgrepo-com.svg"
+                alt="icone instagram"
+                width={600}
                 height={600}
                 style={{
-                  objectFit: 'cover', 
+                  objectFit: 'cover',
                   width: '23px',
-                  height: '23px'
-                }}></Image>
-                        <figcaption>
-                           <span className='font-footer'>Instagram</span>
-                        </figcaption>
-                        </figure> 
+                  height: '23px',
+                }}
+              ></Image>
+              <figcaption>
+                <span className="font-footer">Instagram</span>
+              </figcaption>
+            </figure>
 
-                            <figure>
-                        <Image src="/icons/phone-svgrepo-com.svg"
-                alt="icone insta"  width={600}
+            <figure>
+              <Image
+                src="/icons/phone-svgrepo-com.svg"
+                alt="icone insta"
+                width={600}
                 height={600}
                 style={{
-                  objectFit: 'cover', 
+                  objectFit: 'cover',
                   width: '23px',
-                  height: '23px'
-                }}></Image>
-                        <figcaption>
-                           <span className='font-footer'>Telefone</span>
-                        </figcaption>
-                        </figure> 
-                        
-                        </div>
-                         </div>
+                  height: '23px',
+                }}
+              ></Image>
+              <figcaption>
+                <span className="font-footer">Telefone</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-                {/* <ul className='flex flex-row md:flex-col' id="contatos">
+        {/* <ul className='flex flex-row md:flex-col' id="contatos">
                     <li className='m-3  hover:scale-150 text-2xl'><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                             className="bi bi-whatsapp me-1" viewBox="0 0 16 16">
                                 
@@ -101,11 +97,9 @@ const Footer =()=> {
                         style={{cursor:'pointer'}}
                         >Telefone</p></li>
                 </ul>            */}
-                
-        </div>
-
-        </>
-    )
-}
+      </div>
+    </>
+  );
+};
 
 export default Footer;

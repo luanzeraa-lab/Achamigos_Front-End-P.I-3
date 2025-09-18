@@ -1,25 +1,24 @@
-'use client'
+'use client';
 
-import React, { useState, useEffect } from "react";
-import { ViaCep } from "./ViaCep";
+import React, { useState, useEffect } from 'react';
+import { ViaCep } from './ViaCep';
 import Form from 'react-bootstrap/Form';
-import { IEndereco } from "@/app/CadastroUsuario/IEndereco";
+import { IEndereco } from '@/app/CadastroUsuario/IEndereco';
 
 function ConsultaCep() {
   const { data, loading, error, fetchCep } = ViaCep();
 
- 
-  const [cepUser, setCepUser] = useState<string>("");
-  const [cidadeUser, setCidadeUser] = useState<string>("");
-  const [ruaUser, setRuaUser] = useState<string>("");
-  const [numeroUser, setNumeroUser] = useState<string>("");
-  
+  const [cepUser, setCepUser] = useState<string>('');
+  const [cidadeUser, setCidadeUser] = useState<string>('');
+  const [ruaUser, setRuaUser] = useState<string>('');
+  const [numeroUser, setNumeroUser] = useState<string>('');
+
   useEffect(() => {
     if (data) {
-      setCepUser(data.cep || "");
-      setCidadeUser(data.localidade || "");
-      setRuaUser(data.logradouro || "");
-      setNumeroUser("");
+      setCepUser(data.cep || '');
+      setCidadeUser(data.localidade || '');
+      setRuaUser(data.logradouro || '');
+      setNumeroUser('');
     }
   }, [data]);
 
@@ -28,10 +27,9 @@ function ConsultaCep() {
       cep: cepUser,
       cidade: cidadeUser,
       rua: ruaUser,
-      numero: numeroUser
+      numero: numeroUser,
     });
   }, [cepUser, cidadeUser, ruaUser, numeroUser]);
-
 
   return (
     <div>
@@ -43,10 +41,10 @@ function ConsultaCep() {
         placeholder="Digite o CEP"
       />
       <button onClick={() => fetchCep(cepUser)} disabled={loading}>
-        {loading ? "Buscando..." : "Buscar CEP"}
+        {loading ? 'Buscando...' : 'Buscar CEP'}
       </button>
 
-      {error && <p style={{ color: "red" }}>Erro ao buscar CEP.</p>}
+      {error && <p style={{ color: 'red' }}>Erro ao buscar CEP.</p>}
 
       <Form.Label>Cidade</Form.Label>
       <Form.Control

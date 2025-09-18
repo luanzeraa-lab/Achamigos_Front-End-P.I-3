@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { Button } from "react-bootstrap";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { Button } from 'react-bootstrap';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 const Header = () => {
   const router = useRouter();
@@ -29,9 +29,9 @@ const Header = () => {
       <div className="flex flex-row justify-between items-center mt-4 p-4">
         <a
           className="text-decoration-none text-black rounded-full px-5 py-2 border-2 bg-[#ff8110] hover:scale-150 transition-transform"
-          style={{ cursor: "pointer" }}
+          style={{ cursor: 'pointer' }}
           onClick={() => {
-            router.push("/login");
+            router.push('/login');
           }}
         >
           Login
