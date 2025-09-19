@@ -5,12 +5,12 @@ const Footer = () => {
     <>
       <div
         id="rodape"
-        className="flex flex-col align-items-center lg:flex-row lg:justify-evenly bg-[#c08457] "
+        className="flex flex-col align-items-center lg:flex-row lg:justify-evenly bg-[#e2e8f0] "
       >
         <Image
           className="hidden lg:flex mb-2"
           id="logorodape"
-          src="/images/logoprojetoachamigos_processed.png"
+          src="/images/Sem título.png"
           alt="Logo do projeto Achamigos"
           width={50}
           height={50}
@@ -18,9 +18,9 @@ const Footer = () => {
 
         <div className="contatoss">
           <div className="redes">
-            <figure>
+            <figure className='flex flex-row'>
               <Image
-                src="/icons/instagram-logo-facebook-2-svgrepo-com.svg"
+                src="/icons/whatsapp-logo-bold-svgrepo-com.svg"
                 alt="icone Whatsapp"
                 width={600}
                 height={600}
@@ -35,7 +35,7 @@ const Footer = () => {
               </figcaption>
             </figure>
 
-            <figure>
+            <figure className='flex flex-row'>
               <Image
                 src="/icons/instagram-logo-facebook-2-svgrepo-com.svg"
                 alt="icone instagram"
@@ -52,7 +52,7 @@ const Footer = () => {
               </figcaption>
             </figure>
 
-            <figure>
+            <figure className='flex flex-row'>
               <Image
                 src="/icons/phone-svgrepo-com.svg"
                 alt="icone insta"
