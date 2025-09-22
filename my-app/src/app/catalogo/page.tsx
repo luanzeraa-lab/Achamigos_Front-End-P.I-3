@@ -13,15 +13,16 @@ import { useEffect, useState } from 'react';
 const Catalogo = () => {
   const [animal, setAnimal] = useState<IAnimal[]>([]);
 
-  useEffect(() => {
-    const listaAnimal = async () => {
-      const response = await axios.get('http://localhost:3002/cadastroanimal');
+  // COMENTADO PARA NAO DAR ERRO NA HORA DE FAZER O FRONT, SO TIRAR O COMENTARIO DEPOIS
+  // useEffect(() => {
+  //   const listaAnimal = async () => {
+  //     const response = await axios.get('http://localhost:3002/cadastroanimal');
 
-      setAnimal(response.data);
-      console.log(response.data);
-    };
-    listaAnimal();
-  }, []);
+  //     setAnimal(response.data);
+  //     console.log(response.data);
+  //   };
+  //   listaAnimal();
+  // }, []);
 
   return (
     <>

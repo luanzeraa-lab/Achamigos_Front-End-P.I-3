@@ -89,7 +89,7 @@ const Carrossel = () => {
         </div>
 
         <button
-          className="carousel-control-prev bg-transparent border-2"
+          className="carousel-control-prev"
           type="button"
           data-bs-target="#carouselExampleIndicators"
           data-bs-slide="prev"

@@ -5,15 +5,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Main = () => {
   return (
     <>
-      <Carrossel />
-      <div id="bottomcarroussel">
+      <div className="flex flex-col gap-4">
+        <Carrossel />
         <Image
-          id="crime"
-          className="mt-6"
+          className="self-center mb-3"
           src="/images/abandono-de-animais---crime-federal-dyp64t3hrm.webp"
           alt="Crime-related image"
-          width={1000}
-          height={300}
+          width={1200}
+          height={600}
         />
       </div>
     </>

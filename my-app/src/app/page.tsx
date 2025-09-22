@@ -1,18 +1,17 @@
 'use client';
 
-import Header from '../components/Header';
-import Navbarr from '@/components/Navbarr';
+import Nav2 from '../components/Nav2';
 import Main from '../components/Main';
 import Footer from '../components/Footer';
-import '../styles/globals.scss'
+import ComoUsar from '../components/ComoUsar';
+import '../styles/globals.scss';
 
 const App = () => {
   return (
     <div className="bg-[#fffffe]">
-      <Header />
-      <Navbarr />
+      <Nav2 />
       <Main />
-      {/* <Navbarr2/> */}
+      <ComoUsar />
       <Footer />
     </div>
   );
