@@ -17,7 +17,6 @@
 }
 
 body {
-  background-color: #eff0f3;
   font-family: 'Inter', sans-serif;
 }
 
@@ -26,3 +25,13 @@ span {
   font-size: 0.875rem;
   color: #2a2a2a;
 }
+
+/* Media queries customizadas para esconder elementos e outros ajustes fora do tailwindcss */
+//900px
+@media (width <= 56.25rem) {
+  // Home -> Card -> Como usar
+  .image-pet {
+    display: none;
+  }
+}
+

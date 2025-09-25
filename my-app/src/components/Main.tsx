@@ -7,13 +7,13 @@ const Main = () => {
     <>
       <div className="flex flex-col gap-4">
         <Carrossel />
-        <Image
+        {/* <Image
           className="self-center mb-3"
           src="/images/abandono-de-animais---crime-federal-dyp64t3hrm.webp"
           alt="Crime-related image"
           width={1200}
           height={600}
-        />
+        /> */}
       </div>
     </>
   );

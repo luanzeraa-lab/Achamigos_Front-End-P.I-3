@@ -5,7 +5,9 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { SearchBar } from './SearchBar';
 import { Button } from './Button';
+import MenuMobile from './MenuMobile';
 import Link from 'next/link';
+
 
 const Nav2 = () => {
   const router = useRouter();
@@ -22,56 +24,81 @@ const Nav2 = () => {
 
   return (
     <>
-      <nav className="flex flex-row justify-around items-center bg-[#f3f4f6] px-5 py-3">
-        <div>
+      <nav className="flex justify-around items-center bg-[#f3f4f6] py-3">
+         <div className='flex gap-[1.5rem] items-center'>
           <Image
             src="/images/logocerto.png"
             alt="logo"
             width={150}
             height={70}
-            className="cursor-pointer"
+            className="cursor-pointer w-[9.375rem] h-[4.375rem] max-[500px]:w-[7rem] h-[3.36rem]"
             onClick={() => router.push('/')}
           />
-        </div>
 
+          <Image
+            src="/icons/accessibility.svg"
+            alt="botão de acessibilidade"
+            width={32}
+            height={32}
+            className="cursor-pointer"
+          />
+          </div>
+
+          <Image
+            src="/icons/search.svg"
+            alt="botão de pesquisa"
+            width={24}
+            height={24}
+            className="hidden max-[850px]:hidden max-[999px]:flex cursor-pointer"
+          />
+        
+      
         <div>
           <SearchBar placeholder="Procurar" onSearch={handleSearch} />
         </div>
 
         <div className="flex gap-4 items-center">
+          <div className='flex gap-4 max-[850px]:hidden'>
           <Link
             href="/"
-            className="no-underline p-0 h-fit text-[#0d0d0d] hover:text-[#d9376e] hover:underline underline-offset-1"
+            className="no-underline p-0 h-fit text-[#0d0d0d] hover:text-[#d9376e]
+             hover:underline underline-offset-1"
           >
             Home
           </Link>
-
+         
           <Link
             href="/parceiros"
-            className="no-underline p-0 h-fit text-[#0d0d0d] hover:text-[#d9376e] hover:underline underline-offset-1"
+            className="no-underline p-0 h-fit text-[#0d0d0d] hover:text-[#d9376e]
+             hover:underline underline-offset-1"
           >
             Parceiros
           </Link>
 
           <Link
-            href="/catalogo"
-            className="no-underline p-0 h-fit text-[#0d0d0d] hover:text-[#d9376e] hover:underline underline-offset-1"
+            href="/animais"
+            className="no-underline p-0 h-fit text-[#0d0d0d] hover:text-[#d9376e]
+             hover:underline underline-offset-1"
           >
-            Catálogo
+            Animais
           </Link>
 
           <Link
             href="/informacoes"
-            className=" no-underline p-0 h-fit text-[#0d0d0d] hover:text-[#d9376e] hover:underline underline-offset-1"
+            className=" no-underline p-0 h-fit text-[#0d0d0d] hover:text-[#d9376e]
+             hover:underline underline-offset-1"
           >
-            Informações
+            Eventos
           </Link>
+</div>
 
+<div className='hidden max-[850px]:flex cursor-pointer max-[500px]:ml-[1rem]'><MenuMobile/></div>
           <Button
             title="Login"
             onClick={() => {
               router.push('/login');
             }}
+            
           />
         </div>
       </nav>

@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { Container, Row, Col } from 'react-bootstrap';
-import Nav2 from '@/components/Nav2';
+import Nav2 from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 const Parceiros = () => {

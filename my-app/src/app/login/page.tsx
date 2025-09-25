@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useRouter } from 'next/navigation';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import Nav2 from '@/components/Nav2';
+import Nav2 from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 const Login = () => {

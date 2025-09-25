@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import axios from 'axios';
 import { useState } from 'react';
 import { IUser } from './IUser';
-import Nav2 from '@/components/Nav2';
+import Nav2 from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ConsultaCep from '@/components/ConsultaCep';
 import { IEndereco } from './IEndereco';

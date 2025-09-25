@@ -15,7 +15,11 @@ function SearchBar({ placeholder = 'Pesquisar...', onSearch }: SearchBarProps) {
   };
 
   return (
-    <div className="flex flex-row px-4 py-2 items-center gap-3 shadow-sm w-[28.125rem] h-[2.625rem] bg-white border-1 border-solid focus-within:border-[#a1a1aa] border-[#d4d4d8] rounded-[.5rem]">
+    <div
+      className="flex flex-row px-4 py-2 items-center gap-3 shadow-sm w-[28.125rem] h-[2.625rem]
+     max-[1270px]:w-[20.125rem] max-[67.4375rem]:w-[10.75rem] max-[1000px]:hidden  bg-white border-1 border-solid
+      focus-within:border-[#a1a1aa] border-[#d4d4d8] rounded-[.5rem]"
+    >
       <button
         type="submit"
         className="border-none flex appearance-none bg-transparent h-[1rem] w-[1rem] items-center"
@@ -23,7 +27,7 @@ function SearchBar({ placeholder = 'Pesquisar...', onSearch }: SearchBarProps) {
         <div>
           <Image
             src="/icons/search.svg"
-            alt="logo"
+            alt="botão de pesquisa"
             width={16}
             height={16}
             className="cursor-pointer"

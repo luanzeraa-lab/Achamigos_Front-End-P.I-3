@@ -3,7 +3,13 @@ import Image from 'next/image';
 const Footer = () => {
   return (
     <>
-      <div className="flex flex-row px-5 py-3 place-content-between bg-[#f3f4f6] ">
+      <div className="flex max-[641px]:flex-col max-[641px]:text-center max-[641px]:justify-center
+       px-5 py-3 bg-[#f3f4f6]">
+        
+
+        <div className='flex flex-col max-[1049px]:m-auto min-[1050px]:flex-row min-[1050px]:place-content-around w-full'>
+
+        <div className='flex flex-col min-[641px]:flex-row min-[641px]:gap-[2.5rem] min-[641px]:justify-center mb-4 min-[1050px]:flex-row'> 
         <div className="self-center">
           <Image
             src="/images/logocerto.png"
@@ -14,7 +20,7 @@ const Footer = () => {
           />
         </div>
 
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center max-[641px]:mb-2">
           <p className="font-[600] text-[1rem] mb-3">Parceiros</p>
           <div className="flex gap-4 mb-3">
             <Image
@@ -49,13 +55,19 @@ const Footer = () => {
               height={60}
             />
           </div>
-
-          <p className="mb-0 h-fit self-end font-[700]">
+           <p className="hidden mb-0 max-[641px]:self-center max-[641px]:hidden min-[641px]:hidden h-fit self-end font-[700] min-[1050px]:block">
             Copyright 2025® Todos os direitos reservados
-          </p>
-        </div>
+          </p> 
+          </div>
+         </div>
+          <p className="mb-0 max-[641px]:self-center max-[641px]:hidden min-[641px]:hidden h-fit self-end font-[700]">
+            Copyright 2025® Todos os direitos reservados
+          </p> 
+          
 
-        <div className="flex flex-col gap-1 items-center self-end">
+
+
+        <div className="flex flex-col gap-1 items-center min-[641px]:self-center self-end max-[641px]:self-center">
           <p className="font-[600] text-[1rem]">Contato</p>
           <div className="flex flex-row gap-4 h-fit">
             <figure className="flex flex-row gap-2 items-center m-0">
@@ -71,7 +83,8 @@ const Footer = () => {
                 }}
               ></Image>
               <figcaption>
-                <span className="hover:text-[#d9376e] hover:underline underline-offset-1 hover:cursor-pointer">
+                <span className="hover:text-[#d9376e] hover:underline underline-offset-1
+                 hover:cursor-pointer">
                   Whatsapp
                 </span>
               </figcaption>
@@ -90,7 +103,8 @@ const Footer = () => {
                 }}
               ></Image>
               <figcaption>
-                <span className="hover:text-[#d9376e] hover:underline underline-offset-1 hover:cursor-pointer">
+                <span className="hover:text-[#d9376e] hover:underline underline-offset-1
+                 hover:cursor-pointer">
                   Instagram
                 </span>
               </figcaption>
@@ -109,13 +123,20 @@ const Footer = () => {
                 }}
               ></Image>
               <figcaption>
-                <span className="hover:text-[#d9376e] hover:underline underline-offset-1 hover:cursor-pointer">
+                <span className="hover:text-[#d9376e] hover:underline underline-offset-1
+                 hover:cursor-pointer">
                   Telefone
                 </span>
               </figcaption>
             </figure>
           </div>
         </div>
+        
+        <p className="hidden mt-2 mb-0 max-[641px]:self-center max-[641px]:block
+         max-[640px]:self-center h-fit font-[700] min-[641px]:block self-center min-[1050px]:hidden">
+            Copyright 2025® Todos os direitos reservados
+          </p>
+          </div>
       </div>
     </>
   );

@@ -2,9 +2,9 @@
 
 import Image from 'next/image';
 
-import styles from './Catalogo.module.scss';
+import styles from './Animais.module.scss';
 import { Container } from 'react-bootstrap';
-import Nav2 from '@/components/Nav2';
+import Nav2 from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import axios from 'axios';
 import { IAnimal } from './IAnimal';

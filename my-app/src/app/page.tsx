@@ -1,17 +1,19 @@
 'use client';
 
-import Nav2 from '../components/Nav2';
+import Nav2 from '../components/Navbar';
 import Main from '../components/Main';
 import Footer from '../components/Footer';
 import ComoUsar from '../components/ComoUsar';
+import Sobre from '../components/Sobre';
 import '../styles/globals.scss';
 
 const App = () => {
   return (
     <div className="bg-[#fffffe]">
       <Nav2 />
-      <Main />
+      <Sobre />
       <ComoUsar />
+      {/* <Main />  */}
       <Footer />
     </div>
   );
