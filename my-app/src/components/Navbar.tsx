@@ -8,7 +8,6 @@ import { Button } from './Button';
 import MenuMobile from './MenuMobile';
 import Link from 'next/link';
 
-
 const Nav2 = () => {
   const router = useRouter();
   // Código a ser utilizado para implementação do filtro de busca com API
@@ -25,7 +24,7 @@ const Nav2 = () => {
   return (
     <>
       <nav className="flex justify-around items-center bg-[#f3f4f6] py-3">
-         <div className='flex gap-[1.5rem] items-center'>
+        <div className="flex gap-[1.5rem] items-center">
           <Image
             src="/images/logocerto.png"
             alt="logo"
@@ -42,63 +41,63 @@ const Nav2 = () => {
             height={32}
             className="cursor-pointer"
           />
-          </div>
+        </div>
 
-          <Image
-            src="/icons/search.svg"
-            alt="botão de pesquisa"
-            width={24}
-            height={24}
-            className="hidden max-[850px]:hidden max-[999px]:flex cursor-pointer"
-          />
-        
-      
+        <Image
+          src="/icons/search.svg"
+          alt="botão de pesquisa"
+          width={24}
+          height={24}
+          className="hidden max-[850px]:hidden max-[999px]:flex cursor-pointer"
+        />
+
         <div>
           <SearchBar placeholder="Procurar" onSearch={handleSearch} />
         </div>
 
         <div className="flex gap-4 items-center">
-          <div className='flex gap-4 max-[850px]:hidden'>
-          <Link
-            href="/"
-            className="no-underline p-0 h-fit text-[#0d0d0d] hover:text-[#d9376e]
+          <div className="flex gap-4 max-[850px]:hidden">
+            <Link
+              href="/"
+              className="no-underline p-0 h-fit text-[#0d0d0d] hover:text-[#d9376e]
              hover:underline underline-offset-1"
-          >
-            Home
-          </Link>
-         
-          <Link
-            href="/parceiros"
-            className="no-underline p-0 h-fit text-[#0d0d0d] hover:text-[#d9376e]
-             hover:underline underline-offset-1"
-          >
-            Parceiros
-          </Link>
+            >
+              Home
+            </Link>
 
-          <Link
-            href="/animais"
-            className="no-underline p-0 h-fit text-[#0d0d0d] hover:text-[#d9376e]
+            <Link
+              href="/parceiros"
+              className="no-underline p-0 h-fit text-[#0d0d0d] hover:text-[#d9376e]
              hover:underline underline-offset-1"
-          >
-            Animais
-          </Link>
+            >
+              Parceiros
+            </Link>
 
-          <Link
-            href="/informacoes"
-            className=" no-underline p-0 h-fit text-[#0d0d0d] hover:text-[#d9376e]
+            <Link
+              href="/animais"
+              className="no-underline p-0 h-fit text-[#0d0d0d] hover:text-[#d9376e]
              hover:underline underline-offset-1"
-          >
-            Eventos
-          </Link>
-</div>
+            >
+              Animais
+            </Link>
 
-<div className='hidden max-[850px]:flex cursor-pointer max-[500px]:ml-[1rem]'><MenuMobile/></div>
+            <Link
+              href="/informacoes"
+              className=" no-underline p-0 h-fit text-[#0d0d0d] hover:text-[#d9376e]
+             hover:underline underline-offset-1"
+            >
+              Eventos
+            </Link>
+          </div>
+
+          <div className="hidden max-[850px]:flex cursor-pointer max-[500px]:ml-[1rem]">
+            <MenuMobile />
+          </div>
           <Button
             title="Login"
             onClick={() => {
               router.push('/login');
             }}
-            
           />
         </div>
       </nav>

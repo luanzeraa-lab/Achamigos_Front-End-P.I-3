@@ -9,12 +9,12 @@
 
 #main_ {
   overflow: auto;
-  padding: 4rem;
-  background-color: white;
+  background-color: #fffffe;
 
   & .main-container {
     max-width: 33rem;
     margin-left: auto;
+    padding: 1rem;
 
     & .back {
       display: flex;
@@ -24,18 +24,7 @@
     }
 
     & h1 {
-      font: 600 2.5rem/1.25 var(--font-family-poppins);
       margin-bottom: 0.5rem;
-    }
-
-    & p {
-      font: 400 1.5rem/1.5 var(--font-family-poppins);
-      color: var(--text-secondary);
-    }
-
-    & span {
-      font: 400 1.25rem/1.5 var(--font-family-poppins);
-      color: var(--text-secondary);
     }
 
     & Form {
@@ -102,28 +91,28 @@
         .button {
           all: unset;
           font-weight: 500;
-          color: blue;
+          color: #ff8e3c;
           padding: 0.75rem 1.5rem;
           border-radius: 0.5rem;
           cursor: pointer;
 
           &.btn-primary {
-            color: white;
-            background-color: rgb(65, 65, 250);
+            color: #fffffe;
+            background-color: #ff8e3c;
 
             &:hover,
             &:focus {
-              background-color: rgb(14, 14, 248);
+              background-color: #f97316;
             }
           }
 
           &.btn-secondary {
             margin-left: auto;
-            border: 1px solid rgb(65, 65, 250);
+            border: 1px solid #ff8e3c;
 
             &:hover,
             &:focus {
-              color: rgb(14, 14, 248);
+              color: #f97316;
               outline: 0.25rem solid rgba(97, 97, 248, 0.486);
             }
           }
@@ -134,29 +123,54 @@
 }
 
 .asideee {
-  padding: 4rem;
-  background-color: #ffeccf;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fffbeb;
 
   & .aside-container {
     max-width: 31rem;
-
     & > Image {
       width: 100%;
       margin-top: 2rem;
     }
-  }
 
-  & h2 {
-    font: 600 2.5rem/1.25 var(--font-family-poppins);
-    margin-bottom: 0.5rem;
-
-    & span {
-      color: var(--text-highlight);
+    & h2 {
+      font-size: 2rem;
+      margin-block: 1rem;
+      & span {
+        font-size: 2rem;
+        color: #dc2626;
+      }
     }
   }
+}
 
-  & p {
-    font: 400 1.5rem/1.5 var(--font-family-poppins);
-    color: var(--text-secondary);
+@media (width < 67.5rem) {
+  .aside-container {
+    & .logoprincipal {
+      width: 18.75rem;
+      height: 8rem;
+    }
+  }
+}
+
+@media (width < 40rem) {
+  #allpage {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .asideee {
+    display: none;
+
+    .aside-container {
+      max-width: 0rem;
+    }
   }
 }

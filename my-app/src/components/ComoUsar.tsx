@@ -8,8 +8,10 @@ const comoUsar = () => {
           Como encontrar o seu novo pet no nosso site?
         </h1>
         <div className="grid grid-cols-2 gap-4  max-[900px]:grid-cols-1">
-          <div className=" px-4 py-4 ml-auto max-[900px]:m-auto w-[25rem] h-[25rem] max-[420px]:w-[20rem] max-[420px]:h-[20rem] bg-gradient-to-b
-           from-[#3b82f6] to-[#60a5fa] rounded-[1rem]">
+          <div
+            className=" px-4 py-4 ml-auto max-[900px]:m-auto w-[25rem] h-[25rem] max-[420px]:w-[20rem] max-[420px]:h-[20rem] bg-gradient-to-b
+           from-[#3b82f6] to-[#60a5fa] rounded-[1rem]"
+          >
             <p className="text-[3rem] font-[700] text-white mb-0">1</p>
             <p className="text-[1rem] font-[600] text-white text-justify">
               O 1º passo para encontrar seu novo amigo é clicar em "Animais" na
@@ -18,8 +20,10 @@ const comoUsar = () => {
               respectivas casas.
             </p>
           </div>
-          <div className="flex flex-col px-4 py-4 max-[900px]:m-auto w-[25rem] h-[25rem] max-[420px]:w-[20rem] max-[420px]:h-[20rem] bg-gradient-to-b
-           from-[#e6732e] via-[#ff8e3c] to-[#ffb86c] rounded-[1rem]">
+          <div
+            className="flex flex-col px-4 py-4 max-[900px]:m-auto w-[25rem] h-[25rem] max-[420px]:w-[20rem] max-[420px]:h-[20rem] bg-gradient-to-b
+           from-[#e6732e] via-[#ff8e3c] to-[#ffb86c] rounded-[1rem]"
+          >
             <p className="text-[3rem] font-[700] self-end max-[900px]:self-start text-white mb-0">
               2
             </p>
@@ -37,8 +41,10 @@ const comoUsar = () => {
               className="image-pet rounded-full shadow-lg object-cover"
             />
           </div>
-          <div className=" px-4 py-4 ml-auto max-[900px]:m-auto w-[25rem] h-[25rem] max-[420px]:w-[20rem] max-[420px]:h-[20rem] bg-gradient-to-b
-           from-[#e6732e] via-[#ff8e3c] to-[#ffb86c] rounded-[1rem]">
+          <div
+            className=" px-4 py-4 ml-auto max-[900px]:m-auto w-[25rem] h-[25rem] max-[420px]:w-[20rem] max-[420px]:h-[20rem] bg-gradient-to-b
+           from-[#e6732e] via-[#ff8e3c] to-[#ffb86c] rounded-[1rem]"
+          >
             <p className="text-[3rem] font-[700] text-white mb-0">3</p>
             <p className="text-[1rem] font-[600] text-white text-justify">
               {' '}
@@ -47,8 +53,10 @@ const comoUsar = () => {
               mais informações sobre.
             </p>
           </div>
-          <div className="flex flex-col px-4 max-[900px]:m-auto py-4 w-[25rem] h-[25rem] max-[420px]:w-[20rem] max-[420px]:h-[20rem]  bg-gradient-to-b
-           from-[#3b82f6] to-[#60a5fa] rounded-[1rem]">
+          <div
+            className="flex flex-col px-4 max-[900px]:m-auto py-4 w-[25rem] h-[25rem] max-[420px]:w-[20rem] max-[420px]:h-[20rem]  bg-gradient-to-b
+           from-[#3b82f6] to-[#60a5fa] rounded-[1rem]"
+          >
             <p className="text-[3rem] font-[700] self-end max-[900px]:self-start text-white mb-0 text-justify">
               4
             </p>

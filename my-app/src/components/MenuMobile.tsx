@@ -4,34 +4,27 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 const MenuMobile = () => {
-
   const [abrir, setAbrir] = useState(false);
 
   const abrirMenu = () => {
     setAbrir(!abrir);
   };
 
-   return (
-   <>
-    
-<div className='flex flex-col'>
-          <button
-            className="bg-transparent border-none"
-            onClick={abrirMenu}
-          >
-            <Image
-                        src="/icons/menu.svg"
-                        alt="botão para abrir menu"
-                        width={32}
-                        height={32}
-                      />
-          </button>
-        
- <div
+  return (
+    <>
+      <div className="flex flex-col">
+        <button className="bg-transparent border-none" onClick={abrirMenu}>
+          <Image
+            src="/icons/menu.svg"
+            alt="botão para abrir menu"
+            width={32}
+            height={32}
+          />
+        </button>
+
+        <div
           className={`w-full flex flex-wrap gap-4 bg-[#ffffe]  ${abrir ? 'flex' : 'hidden'}`}
         >
-        
-          
           <Link
             href="/parceiros"
             className="no-underline p-0 h-fit text-[.75rem] text-[#0d0d0d] hover:text-[#d9376e]
@@ -63,10 +56,9 @@ const MenuMobile = () => {
           >
             Login
           </Link>
-
-</div>
-</div>
-</>
+        </div>
+      </div>
+    </>
   );
 };
 export default MenuMobile;

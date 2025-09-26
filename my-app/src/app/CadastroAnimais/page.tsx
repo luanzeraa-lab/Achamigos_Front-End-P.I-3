@@ -322,11 +322,11 @@ const CadastroAnimais = () => {
               </p>
             </header>
             <Image
-              className=""
+              className={styles['logoprincipal']}
               src="/images/logocerto.png"
-              width={650}
+              width={500}
               height={200}
-              alt="logo"
+              alt="logo achamigos"
             />
           </div>
         </aside>
