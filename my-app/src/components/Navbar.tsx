@@ -95,6 +95,7 @@ const Nav2 = () => {
           </div>
           <Button
             title="Login"
+            className='max-[500px]:hidden'
             onClick={() => {
               router.push('/login');
             }}

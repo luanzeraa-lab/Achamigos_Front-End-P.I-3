@@ -1,5 +1,5 @@
 'use client';
-
+import { Button } from './Button';
 import React, { useState, useEffect } from 'react';
 import { ViaCep } from './ViaCep';
 import Form from 'react-bootstrap/Form';
@@ -32,18 +32,19 @@ function ConsultaCep() {
   }, [cepUser, cidadeUser, ruaUser, numeroUser]);
 
   return (
-    <div>
+    <div className='flex flex-col'>
       <Form.Label>CEP</Form.Label>
       <Form.Control
         type="text"
         value={cepUser}
         onChange={(e) => setCepUser(e.target.value)}
         placeholder="Digite o CEP"
+        className='mb-2'
       />
-      <button onClick={() => fetchCep(cepUser)} disabled={loading}>
+      <Button className='mt-2 mb-4 w-[10rem]' title='Buscar CEP'  onClick={() => fetchCep(cepUser)} disabled={loading}>
         {loading ? 'Buscando...' : 'Buscar CEP'}
-      </button>
-
+        </Button>
+      
       {error && <p style={{ color: 'red' }}>Erro ao buscar CEP.</p>}
 
       <Form.Label>Cidade</Form.Label>
@@ -51,6 +52,7 @@ function ConsultaCep() {
         type="text"
         value={cidadeUser}
         onChange={(e) => setCidadeUser(e.target.value)}
+        className='mb-2'
       />
 
       <Form.Label>Rua</Form.Label>
@@ -58,6 +60,7 @@ function ConsultaCep() {
         type="text"
         value={ruaUser}
         onChange={(e) => setRuaUser(e.target.value)}
+        className='mb-2'
       />
     </div>
   );

@@ -13,7 +13,6 @@ const App = () => {
       <Nav2 />
       <Sobre />
       <ComoUsar />
-      {/* <Main />  */}
       <Footer />
     </div>
   );

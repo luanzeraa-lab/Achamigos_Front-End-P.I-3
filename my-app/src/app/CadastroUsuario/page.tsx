@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from 'react-bootstrap';
+import { Button } from '../../components/Button';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
 import { useState } from 'react';
@@ -52,9 +52,11 @@ const CadastroUser = () => {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col bg-[#ffeccf]">
-        <Nav2 />
-        <Form>
+    <Nav2 />
+    <div className='flex flex-col items-center gap-0 mt-[2.5rem]'>
+      <h1 className='text-[700] text-center'>Cadastre já sua ONG no Achamigos! </h1>
+     
+        <Form className='max-[850px]:w-[35.625rem] max-[600px]:w-[20.625rem]  shadow-sm rounded-[.5rem] h-[80rem] w-[50rem] flex flex-col gap-2 bg-[#f5f5f4] p-4 mb-[4rem]'>
           <div>
             <Form.Label>Nome</Form.Label>
             <Form.Control
@@ -66,7 +68,7 @@ const CadastroUser = () => {
           </div>
 
           <div>
-            <Form.Label>Telefone</Form.Label>
+            <Form.Label >Telefone</Form.Label>
             <Form.Control
               type="text"
               placeholder="Insira o telefone"
@@ -121,7 +123,7 @@ const CadastroUser = () => {
             <Form.Label>N°</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Insira o Endereço"
+              placeholder="Insira o número do endereço"
               value={numeroUser}
               onChange={(e) => setNumeroUser(e.target.value)}
             />
@@ -141,7 +143,6 @@ const CadastroUser = () => {
             <Form.Label>Status</Form.Label>
             <Form.Control
               type="text"
-              placeholder=""
               value={userStatus}
               onChange={(e) => setUserStatus(e.target.value)}
             />
@@ -151,18 +152,17 @@ const CadastroUser = () => {
             <Form.Label>Link do seu site</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Digite o link do seu site"
+              placeholder="Coloque o link do seu site"
               value={linkUser}
               onChange={(e) => setLinkUser(e.target.value)}
             />
           </div>
 
-          <Button type="button" onClick={() => createUser()}>
-            Finalizar cadastro
-          </Button>
+          <Button className='self-end mt-auto w-[10rem]' title='Finalizar Cadastro' onClick={() => createUser()}/>
         </Form>
-        <Footer />
-      </div>
+
+    </div>
+      <Footer />
     </>
   );
 };

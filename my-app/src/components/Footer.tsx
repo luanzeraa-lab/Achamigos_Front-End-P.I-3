@@ -3,7 +3,7 @@ import Image from 'next/image';
 const Footer = () => {
   return (
     <>
-      <div
+      <footer
         className="flex max-[641px]:flex-col max-[641px]:text-center max-[641px]:justify-center
        px-5 py-3 bg-[#f3f4f6]"
       >
@@ -141,7 +141,7 @@ const Footer = () => {
             Copyright 2025® Todos os direitos reservados
           </p>
         </div>
-      </div>
+      </footer>
     </>
   );
 };

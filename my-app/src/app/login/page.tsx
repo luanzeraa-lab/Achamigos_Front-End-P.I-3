@@ -1,5 +1,4 @@
 'use client';
-import styles from './CadastroAnimais.module.scss';
 import { useRouter } from 'next/navigation';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { Button } from '../../components/Button';
@@ -17,8 +16,9 @@ const Login = () => {
 
   return (
     <>
+    
       <Nav2 />
-      <main className="flex flex-col bg-[#fffffe]">
+      <main className="min-h-screen flex flex-col bg-[#fffffe] mt-[6rem]">
         <Formik
           initialValues={{ emailcpf: '', password: '' }}
           validationSchema={validation}
@@ -39,36 +39,38 @@ const Login = () => {
                 <Field
                   type="text"
                   name="emailcpf"
-                  className="form-control"
+                  placeholder="Digite seu email ou CPF"
+                  className="form-control text-[14px]"
                   id="emailcpf"
                 />
                 <ErrorMessage name="emailcpf" component="div" />
 
-                <label htmlFor="password" className="mt-4 mb-1 font-[700] ">
+                <label htmlFor="password" className="mt-4 mb-1 font-[700]">
                   Senha
                 </label>
                 <Field
                   type="password"
                   name="password"
-                  className="form-control"
+                  placeholder="Digite sua senha"
+                  className="form-control text-[14px]"
                   id="password"
                 />
                 <ErrorMessage name="password" component="div" />
 
-                <Button type="submit" title="Entrar" />
+                <Button  type="submit" title="Entrar" className='w-full mt-4 mb-3' />
 
-                <Button
+                <Button 
                   title="Fazer cadastro"
                   onClick={() => {
                     router.push('/CadastroUsuario');
-                  }}
+                  }} className='w-full mt-2'
                 />
               </div>
             </div>
           </Form>
         </Formik>
       </main>
-      <Footer />
+      <Footer/>
     </>
   );
 };

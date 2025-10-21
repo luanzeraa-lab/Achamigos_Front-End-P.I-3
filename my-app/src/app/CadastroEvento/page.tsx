@@ -1,11 +1,12 @@
 'use client';
-
-import { Button } from 'react-bootstrap';
+import styles from './CadastroEventos.module.scss';
+import { Button } from '../../components/Button';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
 import { useState } from 'react';
 import Nav2 from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ConsultaCep from '@/components/ConsultaCep';
 
 const createEvento = (
   nomeEvento: string,
@@ -58,9 +59,10 @@ const CadastroEventos = () => {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col bg-[#ffeccf]">
-        <Nav2 />
-        <Form>
+    <Nav2 />
+      <div className="flex flex-col items-center gap-0 mt-[2.5rem]">
+        <h1 className='text-[700] text-center'>Cadastro de eventos</h1>
+        <Form className='max-[850px]:w-[35.625rem] max-[600px]:w-[20.625rem]  shadow-sm rounded-[.5rem] h-[85rem] w-[50rem] flex flex-col gap-2 bg-[#f5f5f4] p-4 mb-[4rem]'>
           <div>
             <Form.Label>Nome do Evento</Form.Label>
             <Form.Control
@@ -75,7 +77,6 @@ const CadastroEventos = () => {
             <Form.Label>Data</Form.Label>
             <Form.Control
               type="date"
-              placeholder="Insira o telefone"
               value={data_Publicacao}
               onChange={(e) => setData_Publicacao(e.target.value)}
             />
@@ -85,9 +86,18 @@ const CadastroEventos = () => {
             <Form.Label>Data</Form.Label>
             <Form.Control
               type="date"
-              placeholder="Insira o CNPJ"
               value={data_Exclusao}
               onChange={(e) => setData_Exclusao(e.target.value)}
+            />
+          </div>
+
+           <ConsultaCep />
+
+          <div>
+            <Form.Label>N°</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Insira o número do endereço"
             />
           </div>
 
@@ -104,8 +114,9 @@ const CadastroEventos = () => {
           <div>
             <Form.Label>Texto de explicação</Form.Label>
             <Form.Control
+            as="textarea" rows={4}
               type="text"
-              placeholder="Insira a explicação do evento"
+              placeholder="Digite sobre o evento..."
               value={texto}
               onChange={(e) => setTexto(e.target.value)}
             />
@@ -122,9 +133,10 @@ const CadastroEventos = () => {
           </div>
 
           <div className="droparea-wrapper">
-            <h5>📷 Foto do Evento</h5>
-            <div>
+           <Form.Label>📷 Foto do evento</Form.Label>
+            <div className={styles['droparea']}>
               <Form.Control
+              className={styles['inputcontrol']}
                 type="file"
                 id="imagem"
                 name="imagem"
@@ -157,7 +169,9 @@ const CadastroEventos = () => {
           </div>
 
           <Button
-            type="button"
+          title='Finalizar Cadastro'
+          className='w-full mt-auto'
+        
             onClick={() => {
               createEvento(
                 nomeEvento,
@@ -169,12 +183,12 @@ const CadastroEventos = () => {
                 imagemEvento,
               );
             }}
-          >
-            Finalizar cadastro
-          </Button>
+          />
+    
+         
         </Form>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };
