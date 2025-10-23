@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #ffeccf;
+  background-color: #fffffe;
   display: grid;
   grid-template-areas:
     'nav nav '
@@ -32,46 +32,30 @@
   .asfiltro {
     grid-area: aside;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid #a3a3a3;
     flex-direction: column;
-    border: solid 1px black;
-    margin-bottom: 14px;
+    background-color: #f3f4f6;
+    border-radius: 2rem;
+    padding: 1rem;
+    
+    ul {
+        list-style-type: none;
+        li input {
+          margin-right: .5rem;
+        }
+    }
 
-    gap: 50px;
-    background-color: #ffccbc;
-    margin-inline: 20px;
-    border-radius: 50px;
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
   }
 
-  .animais {
+  .flex-col {
     display: flex;
     flex-direction: column;
-  }
-}
-
-.porte {
-  display: flex;
-  flex-direction: column;
-}
-
-.cidade {
-  display: flex;
-  flex-direction: column;
-}
-
-.idadepesq {
-  display: flex;
-  flex-direction: column;
-
-  .botao {
-    border: solid 1px black;
-    border-radius: 20px;
-    color: white;
-    background-color: #2f5d3f;
-    width: 100px;
-    height: 35px;
-    margin-left: 10px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-bottom: 125px;
   }
 }
 

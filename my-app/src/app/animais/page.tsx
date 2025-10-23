@@ -5,6 +5,7 @@ import Image from 'next/image';
 import styles from './Animais.module.scss';
 import { Container } from 'react-bootstrap';
 import Nav2 from '@/components/Navbar';
+import { Button } from '../../components/Button';
 import Footer from '@/components/Footer';
 import axios from 'axios';
 import { IAnimal } from './IAnimal';
@@ -32,18 +33,18 @@ const Catalogo = () => {
         </div>
 
         <div className={styles['apresentacao']}>
-          <h1 className="text-4xl text-[#2F5D3F]">
-            Encontre o seu novo <br /> melhor amigo!
+          <h1 className="text-4xl">
+            Encontre o seu novo melhor amigo!
           </h1>
           <h5>
-            Esses são os amigos que estão esperando por um <br /> lar cheio de
+            Esses são os amigos que estão esperando por um lar cheio de
             amor e carinho &hearts;
           </h5>
         </div>
 
         <div className={styles['asfiltro']}>
           <h2>Filtro</h2>
-          <div className={styles['animais']}>
+          <div className={styles['flex-col']}>
             <h2>Animais</h2>
             <ul>
               <li>
@@ -64,7 +65,7 @@ const Catalogo = () => {
             </ul>
           </div>
 
-          <div className={styles['porte']}>
+          <div className={styles['flex-col']}>
             <h2>Porte</h2>
             <ul>
               <li>
@@ -85,7 +86,7 @@ const Catalogo = () => {
             </ul>
           </div>
 
-          <div className={styles['cidade']}>
+          <div className={styles['flex-col']}>
             <h2>Cidade</h2>
             <ul>
               <li>
@@ -106,7 +107,7 @@ const Catalogo = () => {
             </ul>
           </div>
 
-          <div className={styles['idadepesq']}>
+          <div className={styles['flex-col']}>
             <h2>Idade</h2>
             <ul>
               <li>
@@ -120,19 +121,11 @@ const Catalogo = () => {
               </li>
             </ul>
 
-            <input
-              className="border-2 rounded-full bg-[#ff8110] w-20 m-2"
-              type="button"
-              value="Filtrar"
-            />
-
-            <Image
-              className="my-5 border rounded-2xl"
-              src="/images/abandono-de-animais---crime-federal-dyp64t3hrm.webp"
-              alt="Crime-related image"
-              width={350}
-              height={500}
-            />
+          <Button
+            title="Filtrar"
+            className='w-full'
+          />
+            
           </div>
         </div>
 

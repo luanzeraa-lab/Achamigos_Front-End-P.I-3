@@ -34,12 +34,12 @@ const Login = () => {
                 <p className=" self-center font-bold text-[1.5rem]">Login</p>
 
                 <label htmlFor="emailcpf" className="font-[700] mb-1">
-                  Email ou CPF
+                  Nome de usuário ou Email
                 </label>
                 <Field
                   type="text"
                   name="emailcpf"
-                  placeholder="Digite seu email ou CPF"
+                  placeholder="Digite seu nome de usuário ou Email"
                   className="form-control text-[14px]"
                   id="emailcpf"
                 />

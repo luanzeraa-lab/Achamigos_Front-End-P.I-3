@@ -82,7 +82,7 @@ const Nav2 = () => {
             </Link>
 
             <Link
-              href="/informacoes"
+              href="/Eventos"
               className=" no-underline p-0 h-fit text-[#0d0d0d] hover:text-[#d9376e]
              hover:underline underline-offset-1"
             >
