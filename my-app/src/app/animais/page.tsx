@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-
 import styles from './Animais.module.scss';
 import { Container } from 'react-bootstrap';
 import Nav2 from '@/components/Navbar';
@@ -70,18 +69,18 @@ const Catalogo = () => {
             <ul>
               <li>
                 <input className="form-check-input" type="checkbox" />
-                <label className="form-check-label">P</label>
+                <label className="form-check-label">Pequeno</label>
               </li>
 
               <li>
                 <input className="form-check-input" type="checkbox" />
-                <label className="form-check-label">M</label>
+                <label className="form-check-label">Médio</label>
               </li>
 
               <li>
                 {' '}
                 <input className="form-check-input" type="checkbox" />
-                <label className="form-check-label">G</label>
+                <label className="form-check-label">Grande</label>
               </li>
             </ul>
           </div>
@@ -103,6 +102,26 @@ const Catalogo = () => {
                 {' '}
                 <input className="form-check-input" type="checkbox" />
                 <label className="form-check-label">Outras</label>
+              </li>
+            </ul>
+          </div>
+
+           <div className={styles['flex-col']}>
+            <h2>Castrado</h2>
+            <ul>
+              <li>
+                <input className="form-check-input" type="checkbox" />
+                <label className="form-check-label">Sim</label>
+              </li>
+
+              <li>
+                <input className="form-check-input" type="checkbox" />
+                <label className="form-check-label">Não</label>
+              </li>
+
+              <li>
+                <input className="form-check-input" type="checkbox" />
+                <label className="form-check-label">NA</label>
               </li>
             </ul>
           </div>
