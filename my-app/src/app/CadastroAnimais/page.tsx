@@ -76,7 +76,7 @@ const CadastroAnimais = () => {
                 height={32}
                 style={{ cursor: 'pointer' }}
                 onClick={() => {
-                  router.push('/login');
+                  router.push('/PaginaUsuario');
                 }}
               />
               <span>Voltar</span>

@@ -10,13 +10,11 @@ const Parceiros = () => {
     <>
       <Container
         fluid
-        className="bg-[#ffeccf] m-0 p-0 min-h-screen flex flex-col w-screen"
+        className="bg-[#fffffe] m-0 p-0 min-h-screen flex flex-col w-screen"
       >
         <Nav2 />
 
-        <div className="w-full h-1 bg-gradient-to-r from-white to-black"></div>
-
-        <div className="text-center bg-dark flex-1 flex flex-col">
+        <div className="text-center bg-dark flex-1 flex flex-col py-4">
           <h1 className="font-sans text-3xl uppercase tracking-wide text-white">
             Veja quem são nossos Parceiros!
           </h1>

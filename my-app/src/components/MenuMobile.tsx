@@ -42,7 +42,7 @@ const MenuMobile = () => {
           </Link>
 
           <Link
-            href="/informacoes"
+            href="/Eventos"
             className=" no-underline p-0 text-[.75rem] h-fit text-[#0d0d0d] hover:text-[#d9376e]
              hover:underline underline-offset-1"
           >
