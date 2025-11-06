@@ -33,7 +33,7 @@ const Animais = () => {
     
       <Container fluid className={styles['gridcate']}>
         <div className={styles['apresentacao']}>
-          <h1 className="text-[1.875rem] font-[700]">
+          <h1 className="text-[1.875rem] font-[700] my-2">
             Pets para adoção
           </h1>
         </div>
