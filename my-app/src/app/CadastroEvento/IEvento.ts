@@ -1,11 +1,8 @@
-export interface IEvento{
-    idEvento : number;
-    idUsuario:  number;
-    nomeEvento: string;
-    data_Publicacao: Date;
-    data_Exclusao : Date;
-    tipo_Evento: string;
-    texto: string;
-    eventoStatus: string;
-    imagemEvento: string;
+export interface IEvento {
+  _id?: string;
+  data: string;
+  tipo_Evento: string;
+  texto: string;
+  linkEvento: string;
+  imagem?: string;
 }
